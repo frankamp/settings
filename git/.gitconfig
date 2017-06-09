@@ -1,0 +1,22 @@
+[user]
+        email = jfrankamp@armus.com
+        name = Josh Frankamp
+[push]
+        default = simple
+[core]
+        editor = emacs
+        excludesfile = /Users/jfrankamp/.gitignore_global
+        autocrlf = input
+[alias]
+sq2 = reset --soft HEAD~2
+sq3 = reset --soft HEAD~3
+sq4 = reset --soft HEAD~4
+sq5 = reset --soft HEAD~5
+sq6 = reset --soft HEAD~6
+sq7 = reset --soft HEAD~7
+sq8 = reset --soft HEAD~8
+sq9 = reset --soft HEAD~9
+sqcommit = git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"
+lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
